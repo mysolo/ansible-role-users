@@ -1,0 +1,12 @@
+---
+# tasks file for users
+
+- name: User Role - configuration for user 
+  debug: var=user_list
+  debug: var=user_list_name
+  debug: var=users
+  debug: msg="get login is {{ users[item].login }} and uid is {{ users[item].uid }} "
+    #- debug: msg="get user is {{ users[item].uid }}"
+    #- debug: var=users.{{item}}.uid
+  with_items: user_list_name
+

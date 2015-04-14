@@ -1,0 +1,5 @@
+---
+# vars file for users
+
+user_list_name: "{{ hostvars[inventory_hostname][user_list] }}"
+
